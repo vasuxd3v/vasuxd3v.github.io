@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vasuxdev — mark</title>
+    <meta name="description" content="mark / vasuxdev — executor developer, reverse engineer, bypass specialist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outer" data-cursor-outline>
+        <div class="cursor-sizer">
+            <div class="cursor-ring">
+                <span class="c-tl"></span>
+                <span class="c-tr"></span>
+                <span class="c-bl"></span>
+                <span class="c-br"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background -->
+    <canvas id="aurora" aria-hidden="true"></canvas>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- ─── TOP BAR ──────────────────────────────── -->
+    <div class="top-bar">
+        <div class="tb-profile">
+            <div class="tb-avatar-wrap">
+                <img src="./Photo Dec 21 2025.jpg" alt="vasuxdev" class="tb-avatar" crossorigin="anonymous">
+                <span class="tb-online-dot"></span>
+            </div>
+            <div class="tb-info">
+                <span class="tb-name">vasuxdev</span><span class="tb-tag">#0</span>
+            </div>
+        </div>
+        <div class="tb-stats">
+            <span class="tb-stat"><i class="fa-solid fa-eye tb-icon"></i><span id="view-count">2,943</span></span>
+            <span class="tb-sep">·</span>
+            <span class="tb-stat" id="local-time">00:00:00 AM</span>
+        </div>
+    </div>
+
+    <!-- ─── HERO ─────────────────────────────────── -->
+    <main class="hero">
+        <div class="hero-content">
+
+            <!-- Cool handle -->
+            <div class="hero-eyebrow fonts-target">
+                <span class="handle-prefix">~/</span><span class="hero-handle">vasuxdev</span><span class="handle-cursor">▮</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="title fonts-target">
+                hi, i'm <span class="highlight glitch-text" data-text="mark">mark</span>
+            </h1>
+
+            <!-- Accent line -->
+            <div class="hero-accent-line fonts-target" aria-hidden="true"></div>
+
+            <!-- Typewriter -->
+            <div class="typewriter-container fonts-target">
+                <span class="static-prefix">i am&nbsp;</span>
+                <span class="typewriter-box">
+                    <span id="typewriter-text"></span><span class="blinking-cursor">|</span>
+                </span>
+            </div>
+
+            <!-- One-liner typewriter -->
+            <div class="one-liner fonts-target">
+                <span id="one-liner-text"></span><span class="ol-cursor">_</span>
+            </div>
+
+        </div>
+
+        <div class="scroll-down" id="scroll-down-btn" data-magnetic>
+            <span>scroll down</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </main>
+
+    <!-- ─── MARQUEE BAND ─────────────────────────── -->
+    <div class="marquee-band" aria-label="UNPATCHABLE AND FOREVER UNTOUCHABLE ~ VASUXDEV#0">
+        <div class="marquee-track" aria-hidden="true">
+            <span>UNPATCHABLE AND FOREVER UNTOUCHABLE&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;~ VASUXDEV#0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>UNPATCHABLE AND FOREVER UNTOUCHABLE&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;~ VASUXDEV#0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>UNPATCHABLE AND FOREVER UNTOUCHABLE&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;~ VASUXDEV#0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>UNPATCHABLE AND FOREVER UNTOUCHABLE&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;~ VASUXDEV#0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- ─── ABOUT ─────────────────────────────────── -->
+    <section class="about reveal-section" id="about">
+        <div class="about-inner">
+
+            <div class="about-header reveal-item">
+                <span class="about-label">// about</span>
+                <h2 class="about-title">who am i</h2>
+            </div>
+
+            <div class="about-body">
+                <div class="about-bio reveal-item">
+                    <p>
+                        in early 2023, i started working on crackmes and reverse engineering
+                        software. later that year i shifted into low-level systems, executors,
+                        and code injection. my work focuses on bypassing anti-tamper systems
+                        such as <em>Hyperion</em>, building stable execution environments,
+                        and providing reliable injection tools.
+                    </p>
+                    <p>
+                        specializing in <em>C# and C++</em> for low-level systems —
+                        memory manipulation, process injection, DLL hijacking,
+                        anti-tamper bypass, and stable execution environments from scratch.
+                    </p>
+                </div>
+
+                <div class="about-side">
+                    <div class="about-skills reveal-item">
+                        <p class="skills-label">// stack &amp; focus</p>
+                        <div class="skills-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Reverse Engineering</span>
+                            <span class="tag">Memory Manipulation</span>
+                            <span class="tag">Process Injection</span>
+                            <span class="tag">Anti-Tamper Bypass</span>
+                            <span class="tag">Hyperion</span>
+                            <span class="tag">DLL Hijacking</span>
+                            <span class="tag">Lua</span>
+                            <span class="tag">x86 / x64 ASM</span>
+                        </div>
+                    </div>
+
+                    <div class="about-links reveal-item">
+                        <p class="skills-label">// links</p>
+                        <a href="https://github.com/vasuxd3v" class="social-link" target="_blank" rel="noopener" data-magnetic>
+                            <i class="fa-brands fa-github"></i>
+                            <span>github.com/vasuxd3v</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                        </a>
+                        <a href="https://discord.com/users/1075101494375890995/" class="social-link" target="_blank" rel="noopener" data-magnetic>
+                            <i class="fa-brands fa-discord"></i>
+                            <span>vasuxdev#0</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ─── PROJECTS ─────────────────────────────── -->
+    <section class="experience reveal-section" id="experience">
+        <h2 class="section-title reveal-item">~ projects</h2>
+
+        <div class="timeline-container reveal-item">
+            <div class="timeline-nodes-wrapper">
+                <div class="timeline-line"></div>
+                <div class="timeline-nodes" id="timeline-nodes"></div>
+            </div>
+            <div class="timeline-controls">
+                <button class="nav-btn prev-btn" id="prev-btn" data-magnetic aria-label="Previous">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="view-all-btn" data-magnetic>
+                    <i class="fa-solid fa-grip"></i> View all
+                </button>
+                <button class="nav-btn next-btn" id="next-btn" data-magnetic aria-label="Next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="experience-card glassmorphism">
+            <h3 id="exp-title">Project</h3>
+            <p class="exp-meta">
+                <span id="exp-company">—</span>&nbsp;·&nbsp;<span id="exp-date">—</span>
+            </p>
+            <a id="exp-link" href="#" class="exp-link" target="_blank" rel="noopener" aria-label="Project link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <p class="exp-desc" id="exp-desc">—</p>
+            <div class="exp-pagination">
+                click the dots or use arrows&nbsp;·&nbsp;<span id="exp-current">1/1</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
